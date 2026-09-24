@@ -1,10 +1,9 @@
 # Node
 node_modules/
-.env
-.env.local
 .env*.local
 
 # TypeScript compiled output
+temp_auto_push.bat
 dist/
 *.js.map
 *.tsbuildinfo
@@ -12,3 +11,6 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+.gitignore
+branch_structure.json
+config.bat

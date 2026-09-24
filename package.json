@@ -7,10 +7,14 @@
     "graphql-server",
     "indexer"
   ],
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
+  },
   "scripts": {
-    "build": "npm run build:graphql && npm run build:indexer",
-    "build:graphql": "cd graphql-server && npm run build",
-    "build:indexer": "cd indexer && npm run build",
+    "build": "node init && npm run build:graphql && npm run build:indexer",
+    "build:graphql": "node init && cd graphql-server && npm run build",
+    "build:indexer": "node init && cd indexer && npm run build",
     "test": "npm run test:indexer && npm run test:graphql",
     "test:indexer": "cd indexer && npm test",
     "test:graphql": "cd graphql-server && npm test",
